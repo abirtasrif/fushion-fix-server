@@ -27,7 +27,7 @@ class App {
     );
     this.app.use(cors());
     this.app.use(morgan('dev'));
-    this.app.use(ExpressMongoSanitize);
+    this.app.use(ExpressMongoSanitize());
     this.app.use(helmet());
     this.app.use(hpp());
   }
