@@ -74,7 +74,7 @@ userSchema.statics.register = async function (
   if (!validator.isEmail(email)) {
     throw new Error('Invalid Email');
   }
-  if (!validator.isStrongPassword) {
+  if (!validator.isStrongPassword(password)) {
     throw new Error(
       'Password will be minimum 8 char with uppercase, lowercase, number and symbol'
     );
@@ -98,7 +98,7 @@ userSchema.statics.register = async function (
 
 //LOGIN AN USER
 userSchema.statics.login = async function (email, password): Promise<userType> {
-  if (!email || password) {
+  if (!email || !password) {
     throw new Error('You must fill email and password');
   }
 
