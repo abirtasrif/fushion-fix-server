@@ -43,7 +43,8 @@ export default class UserController {
       }
 
       await Promise.resolve().then(async () => {
-        const user = await UserModel.findByIdAndDelete(uid);
+        const user =
+          await UserModel.findByIdAndDelete(uid).populate('bookings');
 
         res.status(200).json(user);
       });
