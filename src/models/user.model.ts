@@ -41,11 +41,6 @@ const userSchema = new Schema<userType>(
         ref: 'Booking',
       },
     ],
-    orderStatus: {
-      enum: ['pending', 'processing', 'resolved'],
-      default: 'pending',
-      type: String,
-    },
   },
   {
     timestamps: true,

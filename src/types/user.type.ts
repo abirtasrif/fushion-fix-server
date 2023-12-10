@@ -10,5 +10,4 @@ export type userType = {
   phoneNumber?: string;
   role: 'user' | 'admin';
   bookings: bookingType[];
-  orderStatus: 'pending' | 'processing' | 'resolved';
 } & Document;

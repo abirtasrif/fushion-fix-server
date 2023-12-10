@@ -5,4 +5,5 @@ import { repairPackageType } from './repairPackage.type';
 export type bookingType = {
   user: userType;
   repairPackage: repairPackageType;
+  orderStatus: 'pending' | 'processing' | 'resolved';
 } & Document;
