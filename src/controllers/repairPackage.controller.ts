@@ -98,7 +98,6 @@ export default class RepairPackageController {
     res: Response
   ): Promise<void> {
     try {
-      const { title, description, category, images, price } = req.body;
       const { rid } = req.params;
       if (!mongoose.Types.ObjectId.isValid(rid)) {
         res.status(404).json({ message: 'Repair Package not found' });

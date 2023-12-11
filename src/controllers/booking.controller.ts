@@ -22,7 +22,7 @@ export default class BookingController {
       const user = await UserModel.findById(req.user?._id).populate('bookings');
 
       const alreadyBooked = user?.bookings.find(
-        (booking: bookingType) => rid === booking.repairPackage._id.toStirn()
+        (booking: bookingType) => rid === booking.repairPackage._id.toString()
       );
 
       if (alreadyBooked) {
