@@ -1,12 +1,10 @@
 {
   "version": 2,
-  "build": [
+  "builds": [
     {
       "src": "dist/app.js",
       "use": "@vercel/node",
-      "config": {
-        "includedFiles": ["dist/**"]
-      }
+      "config": { "includedFiles": ["dist/**"] }
     }
   ],
   "buildCommand": "yarn start",
