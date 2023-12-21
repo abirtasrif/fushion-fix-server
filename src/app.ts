@@ -54,7 +54,7 @@ class App {
     mongoose
       .connect(URI)
       .then(() => {
-        const PORT = process.env.PORT || 4000;
+        const PORT = process.env.PORT || 4999;
 
         this.app.listen(PORT, () => {
           console.log(`Server is running on port: ${PORT}`);

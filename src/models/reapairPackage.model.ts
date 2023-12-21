@@ -34,7 +34,7 @@ const repairPackageSchema = new Schema<repairPackageType>(
 );
 
 const RepairPackageModel = model<repairPackageType>(
-  'User',
+  'RepairPackage',
   repairPackageSchema
 );
 
